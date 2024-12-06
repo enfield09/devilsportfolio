@@ -2,6 +2,7 @@ import 'package:devil/base/app_colors.dart';
 import 'package:devil/base/app_font.dart';
 import 'package:devil/base/app_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -21,7 +22,16 @@ bool onHover = false;
 double aniContWidth = 0.0;
 double aniContPosition = 0.0;
 
+
 class _MyHomePageState extends State<MyHomePage> {
+
+  @override
+  void initState() async{
+    // TODO: implement initState
+    super.initState();
+
+  }
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -62,11 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                 //crossAxisAlignment: CrossAxisAlignment.stretch,
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Row(
+                                  const Row(
                                     //crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsets.all(3.0),
+                                        padding: EdgeInsets.all(3.0),
                                         child: Text("I'M",
                                             style: TextStyle(
                                               fontFamily:
@@ -76,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             )),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.all(3.0),
+                                        padding: EdgeInsets.all(3.0),
                                         child: Text(
                                           "PRAGATHISH AR",
                                           style: TextStyle(
@@ -116,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           borderRadius: BorderRadius.all(Radius.circular(5))),
                                           child: Padding(
                                             padding: const EdgeInsets.only(left:15.0, right: 15,top: 10, bottom: 10),
-                                            child: Text("Contact Me",
+                                            child: Text("Resume",
                                                 style: TextStyle(
                                                   fontSize: 18,
                                                     fontWeight: FontWeight.bold,
