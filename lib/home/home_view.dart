@@ -22,13 +22,23 @@ bool onHover = false;
 double aniContWidth = 0.0;
 double aniContPosition = 0.0;
 
+Supabase supabaseInstance = Supabase.instance;
+
 
 class _MyHomePageState extends State<MyHomePage> {
 
   @override
-  void initState() async{
+  void initState() {
     // TODO: implement initState
     super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async{
+      //List <FileObject> StoredList = await supabaseInstance.client.storage.from("resume").list(path: );
+      print("StroredLIst : ${StoredList.length}");
+    });
+
+
+
 
   }
   
